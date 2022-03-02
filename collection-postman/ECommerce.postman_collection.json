@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "94db6dbd-d17d-472c-9926-f07b978ffecc",
+		"name": "ECommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CATEGORIAS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"nomeCategoria\": \"cama\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/categorias",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IMAGENS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n\r\n    \"imagemProduto\": \"https://www.saldaodainformatica.com.br/5712-thickbox_default/notebook-lenovo-ideapad-320-\"\r\n\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/imagens",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"imagens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PRODUTOS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\r\n  \"nome\": \"Notebook Lenovo1 \",\r\n\r\n  \"preco\": 50,\r\n\r\n  \"descricao\": \"O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500\",\r\n\r\n  \"categorias\": [\r\n\r\n  {\r\n\r\n    \"idCategoria\": 1,\r\n\r\n    \"nomeCategoria\": \"cama\"\r\n\r\n  }  \r\n\r\n  ],\r\n\r\n  \"imagens\": [\r\n\r\n  {\r\n\r\n    \"idImagem\": 1,\r\n\r\n    \"imagemProduto\": \"https://www.saldaodainformatica.com.br/5712-thickbox_default/notebook-lenovo-ideapad-320-80yh0006br-prata-intel-core-i5-7200u-ram-8gb-hd-1tb-tela-156-windows-10.jpg\"\r\n\r\n  }\r\n\r\n  ]\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/produtos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produtos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ITEMVENDA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"itemProduto\":[\r\n      {\r\n         \"idProduto\":1,\r\n         \"nome\":\"Notebook Lenovo \",\r\n         \"preco\":50,\r\n         \"descricao\":\"O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500\",\r\n         \"categorias\":[\r\n            {\r\n               \"idCategoria\":1,\r\n               \"nomeCategoria\": \"cama\"\r\n            }\r\n         ],\r\n         \"imagens\":[\r\n            {\r\n               \"idImagem\":1,\r\n               \"imagemProduto\":\"https://www.saldaodainformatica.com.br/5712-thickbox_default/notebook-lenovo-ideapad-320-80yh0006br-prata-intel-core-i5-7200u-ram-8gb-hd-1tb-tela-156-windows-10.jpg\"\r\n            }\r\n         ]\r\n      }\r\n   ],\r\n   \"itemQuantidade\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/itemVenda",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"itemVenda"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USUARIOS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Karina Carrara\",\r\n    \"email\": \"karina.carrara@gmail.com\",\r\n    \"celular\": \"186281619\",\r\n    \"telefone\": \"11113333\",\r\n    \"cpf\": \"123456789\",\r\n    \"dataDeNascimento\": \"10/10/2021\",\r\n    \"enderecos\": [\r\n        {\r\n            \"enderecoId\": 1,\r\n            \"logradouro\": \"Rua Lino Petenoni\",\r\n            \"numero\": \"120\",\r\n            \"complemento\": \"Apto 83\",\r\n            \"cep\": \"03808-120\",\r\n            \"bairro\": \"Vila Paranaguá\",\r\n            \"cidade\": \"São Paulo\",\r\n            \"estado\": \"SP\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/usuarios",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VENDA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dataVenda\": \"1\",\r\n    \"itens\": [\r\n        {\r\n            \"idItemVenda\": 1,\r\n            \"itemQuantidade\": 10,\r\n            \"itemProduto\": [\r\n                {\r\n                    \"idProduto\": 1,\r\n                    \"nome\": \"Notebook Lenovo1 \",\r\n                    \"preco\": 50.0,\r\n                    \"descricao\": \"O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500\",\r\n                    \"categorias\": [\r\n                        {\r\n                            \"idCategoria\": 1,\r\n                            \"nomeCategoria\": \"cama\"\r\n                        }\r\n                    ],\r\n                    \"imagens\": [\r\n                        {\r\n                            \"idImagem\": 1,\r\n                            \"imagemProduto\": \"https://www.saldaodainformatica.com.br/5712-thickbox_default/notebook-lenovo-ideapad-320-80yh0006br-prata-intel-core-i5-7200u-ram-8gb-hd-1tb-tela-156-windows-10.jpg\"\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"usuario\": {\r\n        \"usuarioId\": 1,\r\n        \"nome\": \"Karina Carrara\",\r\n        \"cpf\": \"123456789\",\r\n        \"dataDeNascimento\": \"10/10/2021\",\r\n        \"celular\": \"186281619\",\r\n        \"telefone\": \"11113333\",\r\n        \"email\": \"karina.carrara@gmail.com\",\r\n        \"enderecos\": [\r\n            {\r\n                \"enderecoId\": 1,\r\n                \"logradouro\": \"Rua Lino Petenoni\",\r\n                \"numero\": \"120\",\r\n                \"complemento\": \"Apto 83\",\r\n                \"cep\": \"03808-120\",\r\n                \"bairro\": \"Vila Paranaguá\",\r\n                \"cidade\": \"São Paulo\",\r\n                \"estado\": \"SP\"\r\n            }\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/venda",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"venda"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ENDERECO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"logradouro\":  \"Rua Lino Petenoni\",\r\n\r\n    \"numero\":\"120\",\r\n\r\n    \"complemento\":\"Apto 83\",\r\n\r\n    \"cep\":\"03808-120\",\r\n\r\n    \"bairro\":\"Vila Paranaguá\",\r\n\r\n    \"cidade\":\"São Paulo\",\r\n\r\n    \"estado\":\"SP\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/enderecos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"enderecos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
